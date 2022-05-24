@@ -11,17 +11,18 @@ import streamlit as st
 
 
 #loading the saved model
-loaded_model = pickle.load(open('C:/Users/USER\Desktop/deploy/trained_model.sav','rb'))
+file = open('C:/Users/USER\Desktop/deploy/trained_model.sav','rb') 
+loaded_model = pickle.load(file) 
+file.close()
  #creating fuction prediction
 def cancer_prediction(input_data):
      input_data_array = np.asarray(input_data)
      input_data_array_reshaped = input_data_array.reshape(1,-1)
      prediction = loaded_model.predict(input_data_array_reshaped)
-     if (prediction[0]==2):
-         return "The Person has benign"
-     else:
-         return "The Person has malignant"
- 
+     if (prediction[0]==2): 
+        return "The Person has benign" 
+     return "The Person has malignant"
+  
 def main():
     st.title("BREAST CANCER PREDICTION WEB APP")
     html_temp = """

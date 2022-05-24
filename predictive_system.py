@@ -19,4 +19,4 @@ features = features.astype(int)
 
 pre = loaded_model.predict(features)
 
-print("The Cancer class of this Features is ",pre)
+print(f"The Cancer class of this Features is {pre}.")
