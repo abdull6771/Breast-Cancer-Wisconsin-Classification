@@ -1,0 +1,44 @@
+:root {
+  --canvas: 36 33% 97%;
+  --surface: 0 0% 100%;
+  --ink: 222 47% 11%;
+  --muted: 215 16% 37%;
+  --line: 30 12% 88%;
+  --navy: 209 67% 18%;
+  --teal: 175 77% 26%;
+  --benign: 142 64% 29%;
+  --malignant: 0 72% 42%;
+  --warning: 32 81% 37%;
+  --info: 224 76% 48%;
+  --ring: 175 77% 26%;
+}
+
+.dark {
+  --canvas: 210 28% 8%;
+  --surface: 210 24% 11%;
+  --ink: 36 24% 94%;
+  --muted: 210 12% 70%;
+  --line: 210 16% 20%;
+  --navy: 210 36% 78%;
+  --teal: 174 42% 52%;
+  --benign: 142 48% 48%;
+  --malignant: 0 62% 62%;
+  --warning: 32 74% 56%;
+  --info: 217 70% 68%;
+  --ring: 174 42% 52%;
+}
+
+@media print {
+  .dark {
+    --canvas: 0 0% 100%;
+    --surface: 0 0% 100%;
+    --ink: 222 47% 11%;
+    --muted: 215 16% 37%;
+  }
+
+  aside,
+  header,
+  [role='note'] {
+    display: none !important;
+  }
+}
