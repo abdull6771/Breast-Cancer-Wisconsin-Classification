@@ -99,6 +99,27 @@ Feature order (Bare Nuclei excluded):
 
 Loading, empty, 4xx, 5xx, and timeout states are handled for every call. If Gemini, PDF generation, or population stats fail, the rest of the workstation stays usable.
 
+## Deploy on Vercel (Hobby / free)
+
+The production build is a static Vite SPA. Production uses mocked APIs (`frontend/.env.production`) so the app runs without FastAPI.
+
+### GitHub import (recommended)
+
+1. Open [vercel.com/new](https://vercel.com/new) and sign in with GitHub.
+2. Import `abdull6771/Breast-Cancer-Wisconsin-Classification`.
+3. Leave the root as the repository root (uses the root `vercel.json`), or set **Root Directory** to `frontend`.
+4. Framework: Vite. Build: `npm run build`. Output: `dist`.
+5. Deploy. Routes such as `/analyze` and `/results` are rewritten to `index.html`.
+
+Hobby is for personal / educational use. Do not put `GEMINI_API_KEY` in `VITE_*` variables.
+
+### CLI
+
+```bash
+npx vercel login
+npx vercel --prod
+```
+
 ## Scripts
 
 ```bash
