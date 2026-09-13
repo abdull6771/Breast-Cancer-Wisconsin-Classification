@@ -1,5 +1,7 @@
 # BCW Clinical — Frontend
 
+**New to this project?** Use the step-by-step guide in the root [README.md](../README.md) (install Node, open `frontend`, run `npm install`, then `npm run dev`). This file is the technical reference.
+
 Production React workstation for the Breast Cancer Wisconsin classifier. This SPA replaces the Streamlit page. It talks only to a FastAPI service (or local mocks). It is an educational / research tool and **not a medical device**.
 
 ## Stack
